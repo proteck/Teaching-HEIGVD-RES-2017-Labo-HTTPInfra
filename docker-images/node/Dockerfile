@@ -1,5 +1,7 @@
 FROM node:4.4
 
 COPY src /opt/app
+WORKDIR /opt/app
+RUN npm install
 
-RUN ["node","/opt/app/index.js"]
+CMD ["node","/opt/app/index.js"]
